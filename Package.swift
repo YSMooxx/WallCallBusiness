@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "WallCallBusiness",
     platforms: [
-        .iOS(.v13) // 明确说明支持 iOS（这样 UIKit 才能用）
+        .iOS(.v14) // 明确说明支持 iOS（这样 UIKit 才能用）
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
