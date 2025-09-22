@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "WallCallBusiness",
+    platforms: [
+        .iOS(.v13) // 明确说明支持 iOS（这样 UIKit 才能用）
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -19,7 +22,8 @@ let package = Package(
         .target(
             name: "WallCallBusiness",
             dependencies: [
-                .product(name: "Package_net", package: "myNetTool")]
+                .product(name: "Package_net", package: "myNetTool"),
+            ],
         ),
         .testTarget(
             name: "WallCallBusinessTests",
